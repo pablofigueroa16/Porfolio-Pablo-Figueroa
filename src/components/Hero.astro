@@ -1,0 +1,58 @@
+<section id="home" class="w-[90%]">
+  <div class="aspect-ratio-container">
+    <img class="w-full h-full object-cover" src="../../public/herop.png" />
+  </div>
+
+  <div
+    class="flex mb-4 h-[10vh] w-full justify-center items-center text-primary"
+  >
+    <h1 class="text-5xl h-[8vh] font-bold w-full text-center">
+      FULL STACK DEVELOPER FROM ARGENTINA
+    </h1>
+  </div>
+  <div class="carousel font-semibold text-lg text-white">
+    <p class="carousel-text">
+      FRONT-END · BACK-END · FRONT-END · BACK-END · FRONT-END · BACK-END ·
+      FRONT-END · BACK-END · FRONT-END · BACK-END · FRONT-END · BACK-END ·
+      FRONT-END · BACK-END · FRONT-END · BACK-END · FRONT-END · BACK-END ·
+      FRONT-END · BACK-END · FRONT-END · BACK-END · FRONT-END · BACK-END ·
+    </p>
+  </div>
+</section>
+
+<style>
+  .aspect-ratio-container {
+    position: relative;
+    width: 100%;
+    padding-bottom: calc(190 / 1490 * 100%);
+  }
+
+  .aspect-ratio-container img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+  .carousel {
+    overflow: hidden;
+    white-space: nowrap;
+    width: 100%;
+  }
+
+  .carousel-text {
+    display: inline-block;
+    animation: scroll 28s linear infinite;
+  }
+
+  @keyframes scroll {
+    from {
+      transform: translateX(0);
+    }
+    to {
+      transform: translateX(-50%);
+    }
+  }
+</style>

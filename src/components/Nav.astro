@@ -1,0 +1,89 @@
+---
+const currentPath = Astro.url.pathname;
+
+const backgroundPosition =
+  currentPath === "/"
+    ? "left-2"
+    : currentPath === "/projects"
+      ? "left-30"
+      : "left-[15.5rem]";
+---
+
+<section class="w-[90%] h-[15vh] sticky z-50 bg-[#13151a] top-0">
+  <nav class="flex w-full h-full justify-between items-center">
+    <img
+      class="h-[10vh]"
+      aspect-ratio="540/223"
+      src="../../public/1.edit.png"
+      alt="Logo"
+    />
+    <ul
+      class="flex gap-6 bg-[#303236] relative font-bold h-[50%] rounded-md p-2 justify-center items-center"
+    >
+      <div
+        class={`w-24 h-[70%] rounded-md bg-[#13151a] absolute transition-all duration-500 ease-in-out ${backgroundPosition}`}
+      >
+      </div>
+
+      <li
+        class={`rounded-md w-24 h-full z-10 text-center transition-all duration-300 ease-in-out
+          ${currentPath === "/" ? "text-primary" : ""}`}
+      >
+        <a
+          href="#home"
+          class={`block w-full h-full rounded-md transition-all duration-500 ease-in-out
+            ${
+              currentPath === "/"
+                ? "hover:bg-[#1a1c21] hover:text-primary-active"
+                : "hover:bg-[#3C3C3C] hover:text-primary"
+            }  
+            focus:bg-[#555] active:scale-95`}
+        >
+          Home
+        </a>
+      </li>
+
+      <li
+        class={`rounded-md w-24 h-full z-10 text-center transition-all duration-500 ease-in-out
+          ${currentPath === "/projects" ? "text-primary" : ""}`}
+      >
+        <a
+          href="#projects"
+          class={`block w-full h-full rounded-md transition-all duration-500 ease-in-out
+            ${
+              currentPath === "/projects"
+                ? "hover:bg-[#1a1c21] hover:text-primary-active"
+                : "hover:bg-[#3C3C3C] hover:text-primary"
+            } 
+            focus:bg-[#555] active:scale-95`}
+        >
+          Projects
+        </a>
+      </li>
+
+      <li
+        class={`rounded-md w-24 h-full z-10 text-center transition-all duration-500 ease-in-out
+          ${currentPath === "/contact" ? "text-primary" : ""}`}
+      >
+        <a
+          href="/contact"
+          class={`block w-full h-full rounded-md transition-all duration-500 ease-in-out
+            ${
+              currentPath === "/contact"
+                ? "hover:bg-[#1a1c21] hover:text-primary-active"
+                : "hover:bg-[#3C3C3C] hover:text-primary"
+            }  
+            focus:bg-[#555] active:scale-95`}
+        >
+          Contact
+        </a>
+      </li>
+    </ul>
+  </nav>
+</section>
+
+<style>
+  .text-primary-active:hover {
+    background-color: #1a1c21;
+  }
+</style>
