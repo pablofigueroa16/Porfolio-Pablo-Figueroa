@@ -3,7 +3,7 @@ console.log(carousel);
 
 function smoothScroll(target, duration) {
   const targetPosition =
-    target.getBoundingClientRect().top + window.scrollY - 150;
+    target.getBoundingClientRect().top + window.scrollY - 100;
   const startPosition = window.scrollY;
   const startTime = performance.now();
 
