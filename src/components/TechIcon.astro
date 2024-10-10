@@ -1,0 +1,17 @@
+---
+const { text } = Astro.props;
+---
+
+<div
+  class="relative h-[5rem] w-[5rem] rounded-md p-2 flex justify-center items-center group"
+>
+  <div class="w-full absolute h-full flex justify-center items-center">
+    <p
+      class="bg-[#2C2C2C] z-50 rounded-md absolute top-[-3rem] text-center text-white overflow-hidden whitespace-nowrap transition-all duration-500 ease-in-out w-0 group-hover:w-[7rem]"
+    >
+      {text}
+    </p>
+  </div>
+
+  <slot />
+</div>

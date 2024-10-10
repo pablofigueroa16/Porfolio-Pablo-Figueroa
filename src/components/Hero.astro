@@ -6,11 +6,11 @@
   <div
     class="flex mb-4 h-[10vh] w-full justify-center items-center text-primary"
   >
-    <h1 class="text-5xl h-[8vh] font-bold w-full text-center">
+    <h1 class="text text-5xl h-[8vh] font-bold w-full text-center">
       FULL STACK DEVELOPER FROM ARGENTINA
     </h1>
   </div>
-  <div class="carousel font-semibold text-lg text-white">
+  <div class="carousel mt-6 font-semibold text-lg text-white">
     <p class="carousel-text">
       FRONT-END · BACK-END · FRONT-END · BACK-END · FRONT-END · BACK-END ·
       FRONT-END · BACK-END · FRONT-END · BACK-END · FRONT-END · BACK-END ·
@@ -21,6 +21,13 @@
 </section>
 
 <style>
+  .text {
+    color: #007bff;
+    transition: color 1s ease-in-out;
+  }
+  .text:hover {
+    color: white;
+  }
   .aspect-ratio-container {
     position: relative;
     width: 100%;
@@ -45,6 +52,7 @@
   .carousel-text {
     display: inline-block;
     animation: scroll 28s linear infinite;
+    animation-delay: 10s;
   }
 
   @keyframes scroll {

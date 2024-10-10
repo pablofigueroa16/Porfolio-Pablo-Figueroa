@@ -1,5 +1,4 @@
 const carousel = document.querySelector(".carousel");
-console.log(carousel);
 
 function smoothScroll(target, duration) {
   const targetPosition =
