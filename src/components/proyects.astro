@@ -14,8 +14,10 @@
     </h2>
   </div>
 
-  <div class="w-full h-[90vh] flex flex-wrap justify-between content-between">
-    <div class="card w-[48%] bg-accent h-[40vh] rounded-md">
+  <div
+    class="w-full lg:h-[90vh] flex flex-wrap justify-between gap-4 lg:content-between"
+  >
+    <div class="card w-full h-48 lg:w-[48%] bg-accent lg:h-[40vh] rounded-md">
       <div class="card-inner">
         <div class="card-front flex justify-center items-center w-full h-full">
           <img
@@ -33,7 +35,7 @@
         </div>
       </div>
     </div>
-    <div class="card w-[48%] bg-accent h-[40vh] rounded-md">
+    <div class="card w-full h-48 lg:w-[48%] bg-accent lg:h-[40vh] rounded-md">
       <div class="card-inner">
         <div class="card-front flex justify-center items-center w-full h-full">
           <img
@@ -50,7 +52,8 @@
           </p>
         </div>
       </div>
-    </div><div class="card w-[48%] bg-accent h-[40vh] rounded-md">
+    </div>
+    <div class="card w-full h-48 lg:w-[48%] bg-accent lg:h-[40vh] rounded-md">
       <div class="card-inner">
         <div class="card-front flex justify-center items-center w-full h-full">
           <img
@@ -67,7 +70,8 @@
           </p>
         </div>
       </div>
-    </div><div class="card w-[48%] bg-accent h-[40vh] rounded-md">
+    </div>
+    <div class="card w-full h-48 lg:w-[48%] bg-accent lg:h-[40vh] rounded-md">
       <div class="card-inner">
         <div class="card-front flex justify-center items-center w-full h-full">
           <img
@@ -90,7 +94,10 @@
   <div class="carousel my-10 font-bold text-lg bg-primary text-text">
     <p class="carousel-text">
       LET'S WORK TOGETHER · LET'S WORK TOGETHER · LET'S WORK TOGETHER · LET'S
-      WORK TOGETHER · LET'S WORK TOGETHER
+      WORK TOGETHER · LET'S WORK TOGETHER · LET'S WORK TOGETHER · LET'S WORK
+      TOGETHER · LET'S WORK TOGETHER · LET'S WORK TOGETHER · LET'S WORK TOGETHER
+      · LET'S WORK TOGETHER · LET'S WORK TOGETHER · LET'S WORK TOGETHER · LET'S
+      WORK TOGETHER · LET'S WORK TOGETHER · LET'S WORK TOGETHER ·
     </p>
   </div>
 </section>
@@ -124,5 +131,23 @@
   .img2 {
     width: 65%;
     height: auto;
+  }
+  .carousel {
+    overflow: hidden;
+    white-space: nowrap;
+    width: 100%;
+  }
+
+  .carousel-text {
+    display: inline-block;
+    animation: scroll 28s linear infinite;
+  }
+  @keyframes scroll {
+    from {
+      transform: translateX(0);
+    }
+    to {
+      transform: translateX(-50%);
+    }
   }
 </style>

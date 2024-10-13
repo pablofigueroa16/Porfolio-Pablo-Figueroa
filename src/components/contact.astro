@@ -1,11 +1,9 @@
-<section id="contact" class="w-[90%] mt- flex flex-col justify-center">
-  <div
-    class="flex h-[20vh] relative gap-3 mb-8 w-full justify-center items-center"
-  >
+<section id="contact" class="w-[90%] flex flex-col justify-center">
+  <div class="flex h-[10vh] relative gap-3 w-full justify-center items-center">
     <img
       src="/icon.png"
       alt="tech"
-      class="w-8 h-8 absolute top-[41%] left-[41%]"
+      class="w-8 h-8 absolute top-[31%] left-[41%]"
     />
     <h2
       class="text text-4xl text-center font-bold w-full text-white hover:text-primary transition-colors duration-1000 ease-in-out"
@@ -13,13 +11,15 @@
       Contact
     </h2>
   </div>
-  <div class="flex justify-between items-center w-full h-[70vh] mb-10">
-    <div class="flex 1 h-full w-full">
+  <div class="flex flex-col lg:flex-row items-center w-full lg:h-[75vh]">
+    <div class="flex 1 h-full w-[80%]">
       <div
-        class="flex flex-col w-[80%] justify-between h-full pt-[2.5rem] py-6"
+        class="flex flex-col w-full gap-6 justify-between h-full pt-[3rem] pb-4"
       >
-        <h2 class="text-7xl w-full">GET IN TOUCH</h2>
-        <div class="flex w-full gap-4">
+        <h2 class="text-4xl text-center lg:text-left lg:text-7xl w-full">
+          GET IN TOUCH
+        </h2>
+        <div class="flex w-full justify-center lg:justify-start gap-4">
           <div class="h-[10vh] w-20 bg-primary rounded-md">
             <img
               class="img h-[10vh] object-cover transition duration-300 ease-in"
@@ -28,13 +28,13 @@
             />
           </div>
           <div class="w-30">
-            <p class="text-3xl font-bold">Pablo Figueroa</p>
-            <p class="text-2xl text-primary font-semibold">
+            <p class="lg:text-3xl font-bold">Pablo Figueroa</p>
+            <p class="lg:text-2xl text-primary font-semibold">
               Full Stack Developer
             </p>
           </div>
         </div>
-        <div class="flex w-full gap-4">
+        <div class="flex w-full justify-center lg:justify-start gap-4">
           <a
             class="flex justify-center w-[5rem] items-center bg-[#2C2C2C] hover:bg-[#3C3C3C] focus:outline-none focus:ring-2 focus:ring-[#555] p-2 px-4 rounded-lg transition-all duration-500 ease-in-out"
             href="https://www.linkedin.com/in/pablofigueroa16/"
@@ -99,11 +99,11 @@
       </div>
     </div>
     <div class="flex 1 h-full w-[80%]">
-      <form class="flex flex-col w-full py-6" action="">
+      <form class="flex flex-col w-full pt-6 pb-4" action="">
         <label class="input text-[#13151a] h-10" for="name">Your Name</label>
         <input
           required
-          class="text-white bg-[#303236] hover:bg-[#3C3C3C] focus:outline-none focus:ring-2 focus:ring-[#555] px-4 h-52 rounded-md transition duration-150 ease-in"
+          class="text-white bg-[#303236] hover:bg-[#3C3C3C] focus:outline-none focus:ring-2 focus:ring-[#555] px-4 h-16 rounded-md transition duration-150 ease-in"
           placeholder="Your Name"
           type="text"
           name="name"
@@ -112,7 +112,7 @@
         <label class="input text-[#13151a] h-10" for="email">Your Email</label>
         <input
           required
-          class="text-white bg-[#303236] hover:bg-[#3C3C3C] focus:outline-none focus:ring-2 focus:ring-[#555] px-4 h-52 rounded-md transition duration-150 ease-in"
+          class="text-white bg-[#303236] hover:bg-[#3C3C3C] focus:outline-none focus:ring-2 focus:ring-[#555] px-4 h-16 rounded-md transition duration-150 ease-in"
           placeholder="Your Email"
           type="email"
           name="email"
@@ -127,10 +127,10 @@
           name="message"
           placeholder="Your Message"
           id="message"
-          cols="20"
-          rows="10"></textarea>
+          cols="10"
+          rows="3"></textarea>
         <button
-          class="bg-[#2C2C2C] hover:bg-[#3C3C3C] focus:outline-none focus:ring-2 focus:ring-[#555] text-primary font-semibold mt-[2.5rem] h-52 rounded-md transition duration-500 ease-in-out"
+          class="bg-[#2C2C2C] hover:bg-[#3C3C3C] focus:outline-none focus:ring-2 focus:ring-[#555] text-primary font-semibold mt-[2.5rem] h-16 rounded-md transition duration-500 ease-in-out"
           type="submit">SEND MESSAGE</button
         >
       </form>
