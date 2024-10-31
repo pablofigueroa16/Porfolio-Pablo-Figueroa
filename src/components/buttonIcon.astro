@@ -1,0 +1,16 @@
+---
+const { href } = Astro.props;
+const { text } = Astro.props;
+---
+
+<a
+  class="flex justify-center w-[9.5rem] sm:w-[10rem] items-center border-2 border-[#3C3C3C] dark:border-[#2C2C2C] bg-white hover:bg-slate-200 dark:bg-[#2C2C2C] dark:hover:bg-[#3C3C3C] focus:outline-none focus:ring-2 focus:ring-[#555] p-2 px-4 sm:p-2 sm:px-4 rounded-lg transition-all duration-500 ease-in-out dark:hover:border-[#3C3C3C]"
+  href={href}
+  target="_blank"
+  aria-label=`Enlace a ${text}`
+>
+  <div class="w-[40px] h-[40px] flex justify-center items-center">
+    <slot />
+  </div>
+  <p class="my-auto ml-4 font-semibold dark:text-white">{text}</p>
+</a>
