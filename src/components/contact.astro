@@ -4,10 +4,10 @@ import SectionTittle from "./section-tittle.astro";
 
 <section id="contact" class="w-[90%] flex flex-col justify-center">
   <SectionTittle title="Contact" />
-  <div class="flex flex-col lg:flex-row items-center w-full lg:h-[75vh]">
-    <div class="flex 1 h-full w-[80%]">
+  <div class="flex flex-col lg:flex-row items-center w-full">
+    <div class="flex-1 w-[80%]">
       <div
-        class="flex flex-col w-full gap-6 justify-between h-full pt-[3rem] pb-4"
+        class="flex flex-col lg:h-[65vh] w-full gap-6 md:justify-between pt-[1.5rem] md:pt-[2.5rem] pb-4"
       >
         <h2 class="text-4xl text-center lg:text-left lg:text-7xl w-full">
           GET IN TOUCH
@@ -27,9 +27,11 @@ import SectionTittle from "./section-tittle.astro";
             </p>
           </div>
         </div>
-        <div class="flex w-full justify-center lg:justify-start gap-4">
+        <div
+          class="flex flex-wrap w-full justify-center lg:justify-start gap-3 md:gap-4"
+        >
           <a
-            class="flex justify-center w-[5rem] items-center border-2 border-text hover:bg-slate-200 dark:bg-[#2C2C2C] dark:hover:bg-[#3C3C3C] focus:outline-none focus:ring-2 focus:ring-[#555] p-2 px-4 rounded-lg transition-all duration-500 ease-in-out"
+            class="w-[45%] md:flex-initial flex justify-center md:w-[5rem] items-center border-2 border-text hover:bg-slate-200 dark:bg-[#2C2C2C] dark:hover:bg-[#3C3C3C] focus:outline-none focus:ring-2 focus:ring-[#555] p-2 px-4 rounded-lg transition-all duration-500 ease-in-out"
             href="https://www.linkedin.com/in/pablofigueroa16/"
             target="_blank"
             aria-label="Enlace a perfil de LinkedIn"
@@ -49,7 +51,7 @@ import SectionTittle from "./section-tittle.astro";
             </div>
           </a>
           <a
-            class="flex justify-center w-[5rem] items-center border-2 border-text hover:bg-slate-200 dark:bg-[#2C2C2C] dark:hover:bg-[#3C3C3C] focus:outline-none focus:ring-2 focus:ring-[#555] p-2 px-4 rounded-lg transition-all duration-500 ease-in-out"
+            class="w-[45%] md:flex-initial flex justify-center md:w-[5rem] items-center border-2 border-text hover:bg-slate-200 dark:bg-[#2C2C2C] dark:hover:bg-[#3C3C3C] focus:outline-none focus:ring-2 focus:ring-[#555] p-2 px-4 rounded-lg transition-all duration-500 ease-in-out"
             href="mailto:pablofigueroa611@gmail.com"
             target="_blank"
             aria-label="Enlace para enviar un correo a Gmail"
@@ -69,7 +71,7 @@ import SectionTittle from "./section-tittle.astro";
             </div>
           </a>
           <a
-            class="flex justify-center w-[5rem] items-center border-2 border-text hover:bg-slate-200 dark:bg-[#2C2C2C] dark:hover:bg-[#3C3C3C] focus:outline-none focus:ring-2 focus:ring-[#555] p-2 px-4 rounded-lg transition-all duration-500 ease-in-out"
+            class="w-[45%] md:flex-initial flex justify-center md:w-[5rem] items-center border-2 border-text hover:bg-slate-200 dark:bg-[#2C2C2C] dark:hover:bg-[#3C3C3C] focus:outline-none focus:ring-2 focus:ring-[#555] p-2 px-4 rounded-lg transition-all duration-500 ease-in-out"
             href="https://github.com/pablofigueroa16"
             target="_blank"
             aria-label="Enlace a perfil de Github"
@@ -89,7 +91,7 @@ import SectionTittle from "./section-tittle.astro";
             </div>
           </a>
           <a
-            class="flex justify-center w-[5rem] items-center border-2 border-text hover:bg-slate-200 dark:bg-[#2C2C2C] dark:hover:bg-[#3C3C3C] focus:outline-none focus:ring-2 focus:ring-[#555] p-2 px-4 rounded-lg transition-all duration-500 ease-in-out"
+            class="w-[45%] md:flex-initial flex justify-center md:w-[5rem] items-center border-2 border-text hover:bg-slate-200 dark:bg-[#2C2C2C] dark:hover:bg-[#3C3C3C] focus:outline-none focus:ring-2 focus:ring-[#555] p-2 px-4 rounded-lg transition-all duration-500 ease-in-out"
             href="https://calendly.com/pablofigueroa611"
             target="_blank"
             aria-label="Enlace a perfil de Github"
@@ -111,40 +113,43 @@ import SectionTittle from "./section-tittle.astro";
         </div>
       </div>
     </div>
-    <div class="flex 1 h-full w-[80%]">
-      <form class="flex flex-col w-full pt-6 pb-4" action="">
-        <label class="input text-transparent h-10" for="name">Your Name</label>
+    <div class="flex-1 w-[80%]">
+      <form class="flex md:h-[65vh] flex-col w-full pb-4" action="">
+        <label class="input text-transparent h-2 md:h-10" for="name"
+          >Your Name</label
+        >
         <input
           required
-          class="dark:text-white border-2 border-text hover:bg-slate-200 dark:bg-[#303236] dark:hover:bg-[#3C3C3C] focus:outline-none focus:ring-2 focus:ring-[#555] px-4 h-16 rounded-md transition duration-150 ease-in"
+          class="dark:text-white border-2 border-text hover:bg-slate-200 dark:bg-[#303236] dark:hover:bg-[#3C3C3C] focus:outline-none focus:ring-2 focus:ring-[#555] px-4 h-16 md:h-20 rounded-md transition duration-150 ease-in"
           placeholder="Your Name"
           type="text"
           name="name"
           id="name"
         />
-        <label class="input text-transparent h-10" for="email">Your Email</label
+        <label class="input text-transparent h-2 md:h-10" for="email"
+          >Your Email</label
         >
         <input
           required
-          class="dark:text-white border-2 border-text hover:bg-slate-200 dark:bg-[#303236] dark:hover:bg-[#3C3C3C] focus:outline-none focus:ring-2 focus:ring-[#555] px-4 h-16 rounded-md transition duration-150 ease-in"
+          class="dark:text-white border-2 border-text hover:bg-slate-200 dark:bg-[#303236] dark:hover:bg-[#3C3C3C] focus:outline-none focus:ring-2 focus:ring-[#555] px-4 h-16 md:h-20 rounded-md transition duration-150 ease-in"
           placeholder="Your Email"
           type="email"
           name="email"
           id="email"
         />
-        <label class="input text-transparent h-10" for="message"
+        <label class="input text-transparent h-2 md:h-10" for="message"
           >Your Message</label
         >
         <textarea
           required
-          class="p-4 rounded-md border-2 border-text hover:bg-slate-200 dark:bg-[#303236] dark:hover:bg-[#3C3C3C] focus:outline-none focus:ring-2 focus:ring-[#555] dark:text-white transition duration-150 ease-in"
+          class="p-4 rounded-md h-20 md:h-36 border-2 border-text hover:bg-slate-200 dark:bg-[#303236] dark:hover:bg-[#3C3C3C] focus:outline-none focus:ring-2 focus:ring-[#555] dark:text-white transition duration-150 ease-in"
           name="message"
           placeholder="Your Message"
           id="message"
           cols="10"
           rows="3"></textarea>
         <button
-          class="border-2 border-text hover:bg-slate-200 dark:bg-[#2C2C2C] dark:hover:bg-[#3C3C3C] focus:outline-none focus:ring-2 focus:ring-[#555] text-primary font-semibold mt-[2.5rem] h-16 rounded-md transition duration-500 ease-in-out"
+          class="border-2 border-text hover:bg-slate-200 dark:bg-[#2C2C2C] dark:hover:bg-[#3C3C3C] focus:outline-none focus:ring-2 focus:ring-[#555] text-primary font-semibold mt-3 md:mt-[2.5rem] h-16 md:h-20 rounded-md transition duration-500 ease-in-out"
           type="submit">SEND MESSAGE</button
         >
       </form>

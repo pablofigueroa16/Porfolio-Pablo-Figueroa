@@ -3,9 +3,9 @@ const currentPath = Astro.url.pathname;
 ---
 
 <section
-  class="w-[90%] lg:h-[15vh] sticky z-50 dark:bg-[#13151a] bg-white dark:text-white top-0"
+  class="w-[90%] h-[10vh] lg:h-[15vh] sticky rounded-md z-50 dark:bg-[#13151a] bg-white dark:text-white top-0"
 >
-  <nav class="flex w-full h-full justify-between items-center">
+  <nav class="flex flex-wrap w-full h-full justify-between items-center">
     <div>
       <a href="/">
         <img
@@ -61,6 +61,132 @@ const currentPath = Astro.url.pathname;
         </svg>
       </button>
     </div>
+    <button
+      id="openMenu"
+      class="w-12 h-10 flex items-center justify-center lg:hidden cursor-pointer rounded-md hover:bg-slate-200 dark:hover:bg-[#3C3C3C]"
+    >
+      <svg
+        xmlns="http://www.w3.org/2000/svg"
+        width="30"
+        height="30"
+        viewBox="0 0 448 512"
+      >
+        <path
+          fill="#007bff"
+          d="M0 96C0 78.3 14.3 64 32 64l384 0c17.7 0 32 14.3 32 32s-14.3 32-32 32L32 128C14.3 128 0 113.7 0 96zM0 256c0-17.7 14.3-32 32-32l384 0c17.7 0 32 14.3 32 32s-14.3 32-32 32L32 288c-17.7 0-32-14.3-32-32zM448 416c0 17.7-14.3 32-32 32L32 448c-17.7 0-32-14.3-32-32s14.3-32 32-32l384 0c17.7 0 32 14.3 32 32z"
+        ></path></svg
+      >
+    </button>
+
+    <button
+      id="closeMenu"
+      class="hidden w-12 h-10 items-center justify-center cursor-pointer rounded-md hover:bg-slate-200 dark:hover:bg-[#3C3C3C]"
+    >
+      <svg
+        xmlns="http://www.w3.org/2000/svg"
+        width="30"
+        height="30"
+        viewBox="0 0 448 512"
+      >
+        <path
+          fill="#007bff"
+          d="M0 96C0 78.3 14.3 64 32 64l384 0c17.7 0 32 14.3 32 32s-14.3 32-32 32L32 128C14.3 128 0 113.7 0 96zM0 256c0-17.7 14.3-32 32-32l384 0c17.7 0 32 14.3 32 32s-14.3 32-32 32L32 288c-17.7 0-32-14.3-32-32zM448 416c0 17.7-14.3 32-32 32L32 448c-17.7 0-32-14.3-32-32s14.3-32 32-32l384 0c17.7 0 32 14.3 32 32z"
+        ></path></svg
+      >
+    </button>
+
+    <ul
+      id="menu"
+      class="hidden w-full h-[85vh] mt-1 flex-col lg:hidden gap-6 bg-white dark:bg-[#303236] border-2 border-[#303236] font-bold rounded-md p-2 justify-center items-center"
+    >
+      <li
+        class={`li flex-1 flex justify-center items-center rounded-md w-full h-full z-10 text-center transition-all duration-300 ease-in-out
+      ${currentPath === "#home" ? "text-primary" : ""}`}
+      >
+        <a
+          href="#home"
+          class={`li flex justify-center items-center p-1 w-full h-full rounded-md transition-all duration-150 ease-in-out
+        ${
+          currentPath === "#home"
+            ? "hover:bg-[#1a1c21] hover:text-primary-active"
+            : "border-2 border-white hover:bg-slate-200 hover:border-[#303236] dark:border-[#303236] dark:hover:bg-[#3C3C3C] dark:hover:text-primary transition-all duration-500 ease-in-out"
+        }  
+        focus:bg-[#1a1c21] focus:text-white dark:focus:text-white active:scale-95`}
+        >
+          Home
+        </a>
+      </li>
+
+      <li
+        class={`li flex-1 flex justify-center items-center rounded-md w-full h-full z-10 text-center transition-all duration-300 ease-in-out
+          ${currentPath === "#Skills" ? "text-primary" : ""}`}
+      >
+        <a
+          href="#Skills"
+          class={`li flex justify-center items-center p-1 w-full h-full rounded-md transition-all duration-150 ease-in-out
+            ${
+              currentPath === "#Skills"
+                ? "hover:bg-[#1a1c21] hover:text-primary-active"
+                : "border-2 border-white hover:border-2 hover:bg-slate-200 hover:border-[#303236] dark:border-2 dark:border-[#303236] dark:hover:bg-[#3C3C3C] dark:hover:text-primary transition-all duration-500 ease-in-out"
+            }  
+            focus:bg-[#1a1c21] focus:text-white dark:focus:text-white active:scale-95`}
+        >
+          Skills
+        </a>
+      </li>
+      <li
+        class={`li flex-1 flex justify-center items-center rounded-md w-full h-full z-10 text-center transition-all duration-300 ease-in-out
+          ${currentPath === "#Services" ? "text-primary" : ""}`}
+      >
+        <a
+          href="#Services"
+          class={`li flex justify-center items-center p-1 w-full h-full rounded-md transition-all duration-150 ease-in-out
+            ${
+              currentPath === "#Services"
+                ? "hover:bg-[#1a1c21] hover:text-primary-active"
+                : "border-2 border-white hover:border-2 hover:bg-slate-200 hover:border-[#303236] dark:border-2 dark:border-[#303236] dark:hover:bg-[#3C3C3C] dark:hover:text-primary transition-all duration-500 ease-in-out"
+            }  
+            focus:bg-[#1a1c21] focus:text-white dark:focus:text-white active:scale-95`}
+        >
+          Services
+        </a>
+      </li>
+      <li
+        class={`li flex-1 flex justify-center items-center rounded-md w-full h-full z-10 text-center transition-all duration-500 ease-in-out
+          ${currentPath === "#projects" ? "text-primary" : ""}`}
+      >
+        <a
+          href="#projects"
+          class={`li flex justify-center items-center p-1 w-full h-full rounded-md transition-all duration-150 ease-in-out
+            ${
+              currentPath === "#projects"
+                ? "hover:bg-[#1a1c21] hover:text-primary-active"
+                : "border-2 border-white hover:border-2 hover:bg-slate-200 hover:border-[#303236] dark:border-2 dark:border-[#303236] dark:hover:bg-[#3C3C3C] dark:hover:text-primary transition-all duration-500 ease-in-out"
+            } 
+            focus:bg-[#1a1c21] focus:text-white dark:focus:text-white active:scale-95`}
+        >
+          Projects
+        </a>
+      </li>
+
+      <li
+        class={`li flex-1 flex justify-center items-center rounded-md w-full h-full z-10 text-center transition-all duration-500 ease-in-out
+          ${currentPath === "#contact" ? "text-primary" : ""}`}
+      >
+        <a
+          href="#contact"
+          class={`li flex justify-center items-center p-1 w-full h-full rounded-md transition-all duration-150 ease-in-out
+            ${
+              currentPath === "#contact"
+                ? "hover:bg-[#1a1c21] hover:text-primary-active"
+                : "border-2 border-white hover:border-2 hover:bg-slate-200 hover:border-[#303236] dark:border-2 dark:border-[#303236] dark:hover:bg-[#3C3C3C] dark:hover:text-primary transition-all duration-500 ease-in-out"
+            }  
+            focus:bg-[#1a1c21] focus:text-white dark:focus:text-white active:scale-95`}
+        >
+          Contact
+        </a>
+      </li>
+    </ul>
     <ul
       class="hidden lg:flex gap-6 bg-white dark:bg-[#303236] border-2 border-[#303236] relative font-bold rounded-md p-2 justify-center items-center"
     >
@@ -162,10 +288,46 @@ const currentPath = Astro.url.pathname;
 </style>
 
 <script>
-  const darkModeToggle = document.getElementById("dark-mode-toggle");
+  const openMenu = document.getElementById("openMenu") as HTMLElement | null;
+  const closeMenu = document.getElementById("closeMenu") as HTMLElement | null;
+  const menu = document.getElementById("menu") as HTMLElement | null;
+  const li = document.getElementsByClassName(
+    "li"
+  ) as HTMLCollectionOf<HTMLElement>;
+  const darkModeToggle = document.getElementById(
+    "dark-mode-toggle"
+  ) as HTMLElement | null;
+
   const isDarkMode = localStorage.getItem("darkMode") === "true";
 
-  if (isDarkMode) document.documentElement.classList.add("dark");
+  if (isDarkMode) {
+    document.documentElement.classList.add("dark");
+  }
+
+  openMenu?.addEventListener("click", () => {
+    openMenu.classList.add("hidden");
+    menu?.classList.remove("hidden");
+    menu?.classList.add("flex");
+    closeMenu?.classList.remove("hidden");
+    closeMenu?.classList.add("flex");
+  });
+
+  closeMenu?.addEventListener("click", () => {
+    closeMenu.classList.add("hidden");
+    closeMenu.classList.remove("block");
+    openMenu?.classList.remove("hidden");
+    menu?.classList.remove("flex");
+    menu?.classList.add("hidden");
+  });
+
+  Array.from(li).forEach((element: HTMLElement) => {
+    element.addEventListener("click", () => {
+      menu?.classList.remove("flex");
+      menu?.classList.add("hidden");
+      closeMenu?.classList.add("hidden");
+      openMenu?.classList.remove("hidden");
+    });
+  });
 
   darkModeToggle?.addEventListener("click", () => {
     document.documentElement.classList.toggle("dark");
