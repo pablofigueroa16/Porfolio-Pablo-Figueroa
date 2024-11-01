@@ -3,8 +3,8 @@ const { text } = Astro.props;
 ---
 
 <div
-  class="flex justify-center items-center gap-2 py-1 px-2 bg-accent dark:bg-text rounded-md"
+  class="flex justify-center items-center gap-1 md:gap-2 md:py-1 md:px-2 bg-transparent md:bg-accent md:dark:bg-text rounded-md"
 >
   <slot />
-  <p class="text-semibold">{text}</p>
+  <p class="text-sm lg:text-basetext-semibold">{text}</p>
 </div>

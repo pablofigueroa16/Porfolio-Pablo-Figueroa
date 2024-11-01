@@ -2,25 +2,55 @@
 const { title } = Astro.props;
 const { src } = Astro.props;
 const { description } = Astro.props;
+const { button } = Astro.props;
+const { href } = Astro.props;
+const { button2 } = Astro.props;
+const { href2 } = Astro.props;
 ---
 
 <div
-  class="card w-full h-48 lg:w-[48%] dark:bg-accent border-2 border-text dark:border-0 lg:h-[40vh] rounded-md"
+  class="card w-full min-h-[26rem] lg:w-[48%] dark:bg-accent border-2 border-text dark:border-0 lg:min-h-[50vh] rounded-md"
 >
-  <div class="card-inner">
+  <div class="card-inner min-h-full">
     <div class="card-front flex justify-center items-center w-full h-full">
       <img class="img2" src={src} />
     </div>
     <div
       class="card-back flex flex-col justify-center items-center w-full h-full dark:bg-accent"
     >
-      <h3 class="text-2xl font-bold text-text dark:text-white">
-        {title}
-      </h3>
-      <p class="text-text dark:text-white mt-2 text-center">
+      <div class="flex justify-center items-center gap-4">
+        <h3 class="text-lg lg:text-2xl font-bold text-text dark:text-white">
+          {title}
+        </h3>
+        {
+          button && href ? (
+            <a
+              class="bg-text rounded-md p-1 md:p-1 md:px-3 text-red-500 hover:text-red-600 focus:outline outline-2 outline-red-600 focus:outline-offset-2 transition-colors duration-500 ease-in-out"
+              target="_blank"
+              href={href}
+            >
+              {button}
+            </a>
+          ) : null
+        }
+
+        {
+          button2 && href2 ? (
+            <a
+              class="bg-text rounded-md p-1 md:p-1 md:px-3 text-blue-500 hover:text-blue-600 focus:outline outline-2 outline-blue-600 focus:outline-offset-2 transition-colors duration-500 ease-in-out"
+              target="_blank"
+              href={href2}
+            >
+              {button2}
+            </a>
+          ) : null
+        }
+      </div>
+
+      <p class="text-sm lg:text-lg text-text p-2 dark:text-white text-center">
         {description}
       </p>
-      <div>
+      <div class="flex flex-wrap px-4 justify-center items-center gap-2">
         <slot />
       </div>
     </div>
@@ -34,7 +64,7 @@ const { description } = Astro.props;
   .card-inner {
     position: relative;
     width: 100%;
-    height: 100%;
+    min-height: 100%;
     transition: transform 1s;
     transform-style: preserve-3d;
   }
@@ -54,7 +84,8 @@ const { description } = Astro.props;
     transform: rotateY(180deg);
   }
   .img2 {
-    width: 65%;
+    width: 85%;
     height: auto;
+    object-fit: cover;
   }
 </style>
