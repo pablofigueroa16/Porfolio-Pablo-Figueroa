@@ -180,7 +180,11 @@ import SectionTittle from "./section-tittle.astro";
 <script>
   const btn = document.getElementById("button") as HTMLInputElement | null;
   const form = document.getElementById("form") as HTMLFormElement | null;
-
+  const name = document.getElementById("from_name") as HTMLInputElement | null;
+  const email = document.getElementById("email_id") as HTMLInputElement | null;
+  const message = document.getElementById(
+    "message"
+  ) as HTMLTextAreaElement | null;
   if (form && btn) {
     form.addEventListener("submit", function (event: Event) {
       event.preventDefault();
@@ -192,6 +196,11 @@ import SectionTittle from "./section-tittle.astro";
       // @ts-ignore
       emailjs.sendForm(serviceID, templateID, this).then(
         () => {
+          if (name && email && message) {
+            name.value = "";
+            email.value = "";
+            message.value = "";
+          }
           btn.value = "SEND!";
           setTimeout(() => {
             btn.value = "SEND EMAIL";
